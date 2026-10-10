@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 
 const SCRIPTS = [
-  "/runtime.js",
   "/_astro/Nav.astro_astro_type_script_index_0_lang.BTi8Y4C0.js",
   "/_astro/Footer.astro_astro_type_script_index_0_lang.QLgbxcz6.js",
   "/_astro/Base.astro_astro_type_script_index_0_lang.C-STEiC0.js",
@@ -20,7 +19,7 @@ export function SiteScripts() {
       const script = document.createElement("script");
       script.src = src;
       script.async = false;
-      if (src.includes("/_astro/")) script.type = "module";
+      if (!src.endsWith("homepage.js")) script.type = "module";
       document.body.appendChild(script);
     }
   }, []);

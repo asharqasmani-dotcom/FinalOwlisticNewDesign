@@ -64,8 +64,6 @@ export default function RootLayout({
         <link rel="stylesheet" href="/inline/components.css" />
         <link rel="stylesheet" href="/_astro/index.BvW567VI.css" />
         <link rel="stylesheet" href="/custom.css" />
-        <link rel="stylesheet" href="/runtime.css" />
-        <link rel="preload" as="image" href="/img/home-planet.webp" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

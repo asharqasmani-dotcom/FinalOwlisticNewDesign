@@ -9,8 +9,3 @@ __pycache__/
 
 homepage/
 homepage-preview.jpg
-
-.next-audit
-
-.data
-.env.local

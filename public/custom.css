@@ -104,7 +104,7 @@
 }
 @media (width <= 760px) {
   .page-brief__inner[data-astro-cid-onysphra] {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 }
 
