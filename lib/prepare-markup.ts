@@ -6,7 +6,7 @@ export function prepareMarkup(html: string): string {
     .replace(/(<meta\b[^>]*>)>/gi, "$1")
     .replace(/<script\b[^>]*src="[^"]*(?:cloudflareinsights\.com|email-decode\.min\.js)[^"]*"[^>]*>[\s\S]*?<\/script>/gi, "")
     .replace(/<a\b[^>]*href="\/cdn-cgi\/l\/email-protection\/[^"]*"[^>]*>[\s\S]*?<\/a>/gi,
-      '<a href="mailto:Ashar@owlisticstudio.com">Ashar@owlisticstudio.com</a>')
+      '<a href="mailto:sales@owlisticstudio.com">sales@owlisticstudio.com</a>')
     .replace(/<video\b([^>]*)>([\s\S]*?)<\/video>/gi, (full, attrs: string, content: string) => {
       if (!/\bautoplay\b/i.test(attrs)) return full;
       attrs = attrs.replace(/\sautoplay\b/i, " data-lazy-video").replace(/\spreload="[^"]*"/i, "");

@@ -31,7 +31,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "Owlistic Studio",
   url: "https://www.owlisticstudio.com",
-  email: "Ashar@owlisticstudio.com",
+  email: "sales@owlisticstudio.com",
   sameAs: ["https://www.linkedin.com/in/muhammad-ashar/"],
 };
 

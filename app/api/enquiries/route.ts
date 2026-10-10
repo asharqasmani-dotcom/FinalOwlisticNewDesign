@@ -53,14 +53,14 @@ export async function POST(request: Request) {
     if (step === 3) {
       // Only show 'received' after the configured destination acknowledges delivery.
       const webhook = process.env.ENQUIRY_WEBHOOK_URL;
-      if (!webhook) return json({error:"Your details are saved, but online delivery is unavailable. Please email Ashar@owlisticstudio.com to send your enquiry."}, 503, id);
+      if (!webhook) return json({error:"Your details are saved, but online delivery is unavailable. Please email sales@owlisticstudio.com to send your enquiry."}, 503, id);
       const delivered = await fetch(webhook, {method:"POST", headers:{"Content-Type":"application/json", "Idempotency-Key":draft.measurementId!, ...(process.env.ENQUIRY_WEBHOOK_TOKEN ? {Authorization:`Bearer ${process.env.ENQUIRY_WEBHOOK_TOKEN}`} : {})}, body:JSON.stringify({id:draft.measurementId, answers}), signal:AbortSignal.timeout(10000)});
-      if (!delivered.ok) return json({error:"Delivery failed. Your details are saved; please try again or email Ashar@owlisticstudio.com."}, 502, id);
+      if (!delivered.ok) return json({error:"Delivery failed. Your details are saved; please try again or email sales@owlisticstudio.com."}, 502, id);
       draft.complete = true;
       await saveDraft(id, draft);
     }
     return json({saved:true,complete:draft.complete,measurementId:draft.measurementId,step}, 200, id);
-  } catch { return json({error:"We could not save or deliver your enquiry. Please try again or email Ashar@owlisticstudio.com."}, 503, id); }
+  } catch { return json({error:"We could not save or deliver your enquiry. Please try again or email sales@owlisticstudio.com."}, 503, id); }
 }
 export async function DELETE(request: Request) {
   if (!sameOrigin(request)) return json({error:"Invalid request origin."}, 403);

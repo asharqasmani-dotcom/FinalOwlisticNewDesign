@@ -133,7 +133,7 @@ const ORGANIZATION_JSON_LD = JSON.stringify({
   "@type": "Organization",
   name: "Owlistic Studio",
   url: SITE_ORIGIN,
-  email: "Ashar@owlisticstudio.com",
+  email: "sales@owlisticstudio.com",
   sameAs: ["https://www.linkedin.com/in/muhammad-ashar/"],
 });
 
