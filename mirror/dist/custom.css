@@ -1,5 +1,155 @@
 /* Owlistic copy layout helpers */
 
+/* page-brief two-column intro (label+heading | copy+links) */
+.page-brief[data-astro-cid-onysphra] {
+  background: #ffffff !important;
+  border-block: 0 !important;
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+.page-brief__inner[data-astro-cid-onysphra] {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) !important;
+  gap: clamp(1.5rem, 5vw, 5rem);
+  align-items: start;
+}
+
+/* Service "evo" bands sit on body gray — keep them white like the brief */
+.section.evo[data-astro-cid-asdozulm] {
+  background: #ffffff !important;
+}
+
+/* Monthly Process — centered head + white step cards (reference style) */
+.section.dp--month[data-astro-cid-biwego7o] {
+  background: var(--bg, #f2f2f2);
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__head[data-astro-cid-biwego7o] {
+  text-align: center;
+  max-width: 40rem;
+  margin-inline: auto;
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__heading[data-astro-cid-biwego7o] {
+  max-width: 18ch;
+  margin-inline: auto;
+  margin-bottom: 0.75rem;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__sub[data-astro-cid-biwego7o] {
+  max-width: 48ch;
+  margin-inline: auto;
+  margin-bottom: 0;
+  opacity: 0.85;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__steps[data-astro-cid-biwego7o] {
+  gap: 0.75rem;
+  max-width: 56rem;
+  margin-inline: auto;
+  padding: 0;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__step[data-astro-cid-biwego7o] {
+  background: #ffffff;
+  border-radius: var(--radius, 16px);
+  padding: clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2.25rem);
+  gap: clamp(1rem, 3vw, 2rem);
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: start;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__num[data-astro-cid-biwego7o] {
+  color: var(--blue, #0004f6);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1;
+  min-width: 2ch;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__step[data-astro-cid-biwego7o] h3[data-astro-cid-biwego7o] {
+  margin-top: 0.1em;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__heading .roll-letter,
+.section.dp--month[data-astro-cid-biwego7o] .dp__heading [data-roll-twin] {
+  transform: none !important;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__heading [data-roll-twin] {
+  display: none !important;
+}
+.page-brief[data-astro-cid-onysphra] h2[data-astro-cid-onysphra] {
+  max-width: 20ch;
+  margin-top: 0.75rem;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+.page-brief[data-astro-cid-onysphra] p[data-astro-cid-onysphra] {
+  max-width: 65ch;
+  margin: 0;
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  line-height: 1.65;
+}
+.page-brief[data-astro-cid-onysphra] ul[data-astro-cid-onysphra] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.page-brief[data-astro-cid-onysphra] a[data-astro-cid-onysphra] {
+  color: var(--blue);
+  text-underline-offset: 0.2em;
+  padding-block: 0.5rem;
+  font-weight: 600;
+  text-decoration: underline;
+  display: inline-block;
+}
+.page-brief[data-astro-cid-onysphra] a[data-astro-cid-onysphra]:focus-visible {
+  outline-offset: 4px;
+  outline: 2px solid;
+}
+@media (width <= 760px) {
+  .page-brief__inner[data-astro-cid-onysphra] {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Keep page-brief headings readable if roll animation still wraps them */
+.page-brief h2 .roll-letter {
+  transform: none !important;
+  translate: none !important;
+}
+.page-brief h2 [data-roll-twin] {
+  display: none !important;
+}
+.page-brief h2 .roll-line {
+  overflow: visible !important;
+  margin-bottom: 0 !important;
+  line-height: inherit !important;
+}
+
+/* Case studies hub: service label + title instead of partner logos */
+.case-card__client[data-astro-cid-q7obu3qe] {
+  align-items: flex-start !important;
+  max-width: min(380px, 68%);
+}
+
+.case-card__service {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  color: var(--white);
+}
+
+.case-card__eyebrow {
+  font-size: 0.62em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.case-card__headline {
+  font-size: 0.95em;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
 .hero__inner > .label {
   display: inline-block;
   margin-bottom: var(--sp-3);
@@ -23,10 +173,134 @@
   font-size: var(--para-sm);
 }
 
+
+/* Get in touch — Owlistic enquiry */
+.enquiry__intro .label {
+  display: inline-block;
+  margin-bottom: var(--sp-3);
+}
+.enquiry__email-line {
+  display: inline-block;
+  margin-top: 0.5em;
+  opacity: 0.85;
+}
+.enquiry__proof--owlistic {
+  display: grid;
+  gap: 0.75rem;
+}
+.enquiry__plan-note {
+  margin: 0;
+  max-width: 28rem;
+  opacity: 0.85;
+}
+.enquiry__monthly-plan {
+  margin-top: var(--sp-4);
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius-sm, 12px);
+  background: color-mix(in srgb, var(--blue, #1027ff) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--blue, #1027ff) 25%, transparent);
+}
+.enquiry__monthly-plan-label {
+  margin: 0 0 0.35rem;
+  font-size: var(--para-sm, 0.875rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.enquiry__monthly-plan-price {
+  margin: 0;
+  font-size: var(--h5, 1.35rem);
+}
+.enquiry__monthly-plan-upfront {
+  margin: 0.35rem 0 0.5rem;
+  font-weight: 500;
+}
+.enquiry__monthly-plan-copy {
+  margin: 0;
+  opacity: 0.8;
+}
+
 /* Service hero proof sits tight under CTA (match reference) */
 .svc-hero__proof[data-astro-cid-asdozulm] {
   margin-top: 0.75rem !important;
   margin-bottom: 0 !important;
+}
+
+/* How We Work — numbered white step cards (reference layout) */
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] {
+  background: var(--bg, #f2f2f2) !important;
+  padding-block: clamp(2.75rem, 7vw, 5.5rem);
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] > .container[data-astro-cid-kn3eqkos] {
+  max-width: 56rem;
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__head[data-astro-cid-kn3eqkos] {
+  margin: 0 0 clamp(1.75rem, 4vw, 2.75rem);
+  max-width: 46rem;
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__head[data-astro-cid-kn3eqkos] .label[data-astro-cid-kn3eqkos] {
+  color: var(--blue, #0004f6);
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__heading[data-astro-cid-kn3eqkos] {
+  margin: 0.65rem 0 0.85rem;
+  max-width: 18ch;
+  font-size: clamp(1.75rem, 3.4vw, 2.65rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__sub[data-astro-cid-kn3eqkos] {
+  margin: 0;
+  max-width: 52ch;
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  line-height: 1.65;
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__list[data-astro-cid-kn3eqkos] {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__item[data-astro-cid-kn3eqkos] {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+  background: #ffffff;
+  border-radius: var(--radius, 16px);
+  padding: clamp(1.25rem, 3vw, 1.85rem) clamp(1.25rem, 3vw, 2.25rem);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__num[data-astro-cid-kn3eqkos] {
+  color: var(--blue, #0004f6);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 500;
+  line-height: 1;
+  min-width: 2ch;
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__item[data-astro-cid-kn3eqkos] h3[data-astro-cid-kn3eqkos] {
+  margin: 0.1em 0 0.4rem;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.25;
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__item[data-astro-cid-kn3eqkos] p[data-astro-cid-kn3eqkos] {
+  margin: 0;
+  max-width: 62ch;
+  font-size: var(--para-sm, 0.95rem);
+  line-height: 1.55;
+  opacity: 0.9;
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__heading .roll-letter {
+  transform: none !important;
+}
+.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__heading [data-roll-twin] {
+  display: none !important;
+}
+@media (width <= 640px) {
+  .section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__item[data-astro-cid-kn3eqkos] {
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 0.9rem;
+  }
 }
 
 /* Ongoing support — cards left / copy right (reference layout) */
@@ -121,82 +395,5 @@
   }
   .section.leaks.leaks--ref[data-astro-cid-kn3eqkos] .leaks__heading[data-astro-cid-kn3eqkos] {
     max-width: 18ch;
-  }
-}
-
-/* How We Work — numbered white step cards (reference layout) */
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] {
-  background: var(--bg, #f2f2f2) !important;
-  padding-block: clamp(2.75rem, 7vw, 5.5rem);
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] > .container[data-astro-cid-kn3eqkos] {
-  max-width: 56rem;
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__head[data-astro-cid-kn3eqkos] {
-  margin: 0 0 clamp(1.75rem, 4vw, 2.75rem);
-  max-width: 46rem;
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__head[data-astro-cid-kn3eqkos] .label[data-astro-cid-kn3eqkos] {
-  color: var(--blue, #0004f6);
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__heading[data-astro-cid-kn3eqkos] {
-  margin: 0.65rem 0 0.85rem;
-  max-width: 18ch;
-  font-size: clamp(1.75rem, 3.4vw, 2.65rem);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__sub[data-astro-cid-kn3eqkos] {
-  margin: 0;
-  max-width: 52ch;
-  font-size: clamp(1rem, 1.35vw, 1.125rem);
-  line-height: 1.65;
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__list[data-astro-cid-kn3eqkos] {
-  display: grid;
-  gap: 0.75rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__item[data-astro-cid-kn3eqkos] {
-  display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
-  gap: clamp(1rem, 3vw, 2rem);
-  align-items: start;
-  background: #ffffff;
-  border-radius: var(--radius, 16px);
-  padding: clamp(1.25rem, 3vw, 1.85rem) clamp(1.25rem, 3vw, 2.25rem);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__num[data-astro-cid-kn3eqkos] {
-  color: var(--blue, #0004f6);
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 500;
-  line-height: 1;
-  min-width: 2ch;
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__item[data-astro-cid-kn3eqkos] h3[data-astro-cid-kn3eqkos] {
-  margin: 0.1em 0 0.4rem;
-  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
-  line-height: 1.25;
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__item[data-astro-cid-kn3eqkos] p[data-astro-cid-kn3eqkos] {
-  margin: 0;
-  max-width: 62ch;
-  font-size: var(--para-sm, 0.95rem);
-  line-height: 1.55;
-  opacity: 0.9;
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__heading .roll-letter {
-  transform: none !important;
-}
-.section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__heading [data-roll-twin] {
-  display: none !important;
-}
-@media (width <= 640px) {
-  .section.leaks.leaks--steps[data-astro-cid-kn3eqkos] .leaks__item[data-astro-cid-kn3eqkos] {
-    grid-template-columns: max-content minmax(0, 1fr);
-    gap: 0.9rem;
   }
 }
