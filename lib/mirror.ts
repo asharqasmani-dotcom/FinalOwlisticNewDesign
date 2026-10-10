@@ -21,7 +21,11 @@ export function resolveMirrorHtml(slug: string[]): string | null {
 
 function stripConsentBanner(html: string): string {
   return html
-    .replace(/<link[^>]*ConsentBanner[^>]*>\s*/gi, "")
+    // ConsentBanner CSS also held btn-bubble-arrow styles; keep those via a dedicated sheet.
+    .replace(
+      /<link[^>]*ConsentBanner[^>]*>/gi,
+      '<link rel="stylesheet" href="/_astro/btn-bubble-arrow.css">',
+    )
     .replace(/<script[^>]*ConsentBanner[^>]*><\/script>\s*/gi, "")
     .replace(
       /<!--\s*Withdrawing consent[\s\S]*?-->\s*<button\b[^>]*data-consent-reopen[^>]*>[\s\S]*?<\/button>/gi,

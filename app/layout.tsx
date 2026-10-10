@@ -48,6 +48,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/_astro/global.Btqt_PqA.css" />
         <link rel="stylesheet" href="/inline/pixelated.css" />
         <link rel="stylesheet" href="/_astro/Base.Cz7aN_E5.css" />
+        <link rel="stylesheet" href="/_astro/btn-bubble-arrow.css" />
         <link rel="stylesheet" href="/inline/components.css" />
         <link rel="stylesheet" href="/_astro/index.BvW567VI.css" />
         <link rel="stylesheet" href="/custom.css" />
