@@ -226,6 +226,71 @@
   margin-bottom: 0 !important;
 }
 
+/* Content Support — 3 white cards on light gray (reference layout) */
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] {
+  background: var(--bg, #f2f2f2) !important;
+  padding-block: clamp(2.75rem, 7vw, 5.5rem);
+}
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] > .container[data-astro-cid-kn3eqkos] {
+  max-width: 72rem;
+}
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] .leaks__head[data-astro-cid-kn3eqkos] {
+  margin: 0 0 clamp(1.75rem, 4vw, 2.75rem);
+  max-width: 22ch;
+}
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] .leaks__head[data-astro-cid-kn3eqkos] .label[data-astro-cid-kn3eqkos] {
+  color: var(--blue, #0004f6);
+}
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] .leaks__heading[data-astro-cid-kn3eqkos] {
+  margin: 0.65rem 0 0;
+  max-width: 14ch;
+  font-size: clamp(1.85rem, 3.6vw, 2.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] .leaks__list[data-astro-cid-kn3eqkos] {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.85rem, 2vw, 1.25rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] .leaks__item[data-astro-cid-kn3eqkos] {
+  display: block;
+  background: #ffffff;
+  border-radius: var(--radius, 16px);
+  padding: clamp(1.35rem, 3vw, 2rem);
+  box-shadow: none;
+  border: 0;
+}
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] .leaks__num[data-astro-cid-kn3eqkos] {
+  display: none;
+}
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] .leaks__item[data-astro-cid-kn3eqkos] h3[data-astro-cid-kn3eqkos] {
+  margin: 0 0 0.7rem;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  line-height: 1.2;
+}
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] .leaks__item[data-astro-cid-kn3eqkos] p[data-astro-cid-kn3eqkos] {
+  margin: 0;
+  max-width: none;
+  font-size: var(--para-sm, 0.95rem);
+  line-height: 1.55;
+  opacity: 0.88;
+}
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] .leaks__heading .roll-letter {
+  transform: none !important;
+}
+.section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] .leaks__heading [data-roll-twin] {
+  display: none !important;
+}
+@media (width <= 820px) {
+  .section.leaks.leaks--cards3[data-astro-cid-kn3eqkos] .leaks__list[data-astro-cid-kn3eqkos] {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Shared support process — 3-column route on pale lavender (reference layout) */
 .section.leaks.leaks--route[data-astro-cid-kn3eqkos] {
   background: #ebebfd !important;
