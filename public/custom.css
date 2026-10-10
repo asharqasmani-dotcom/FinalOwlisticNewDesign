@@ -219,3 +219,9 @@
   margin: 0;
   opacity: 0.8;
 }
+
+/* Service hero proof sits tight under CTA (match reference) */
+.svc-hero__proof[data-astro-cid-asdozulm] {
+  margin-top: 0.75rem !important;
+  margin-bottom: 0 !important;
+}
