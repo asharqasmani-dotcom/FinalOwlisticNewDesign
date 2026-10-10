@@ -17,6 +17,59 @@
 .section.evo[data-astro-cid-asdozulm] {
   background: #ffffff !important;
 }
+
+/* Monthly Process — centered head + white step cards (reference style) */
+.section.dp--month[data-astro-cid-biwego7o] {
+  background: var(--bg, #f2f2f2);
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__head[data-astro-cid-biwego7o] {
+  text-align: center;
+  max-width: 40rem;
+  margin-inline: auto;
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__heading[data-astro-cid-biwego7o] {
+  max-width: 18ch;
+  margin-inline: auto;
+  margin-bottom: 0.75rem;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__sub[data-astro-cid-biwego7o] {
+  max-width: 48ch;
+  margin-inline: auto;
+  margin-bottom: 0;
+  opacity: 0.85;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__steps[data-astro-cid-biwego7o] {
+  gap: 0.75rem;
+  max-width: 56rem;
+  margin-inline: auto;
+  padding: 0;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__step[data-astro-cid-biwego7o] {
+  background: #ffffff;
+  border-radius: var(--radius, 16px);
+  padding: clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2.25rem);
+  gap: clamp(1rem, 3vw, 2rem);
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: start;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__num[data-astro-cid-biwego7o] {
+  color: var(--blue, #0004f6);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1;
+  min-width: 2ch;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__step[data-astro-cid-biwego7o] h3[data-astro-cid-biwego7o] {
+  margin-top: 0.1em;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__heading .roll-letter,
+.section.dp--month[data-astro-cid-biwego7o] .dp__heading [data-roll-twin] {
+  transform: none !important;
+}
+.section.dp--month[data-astro-cid-biwego7o] .dp__heading [data-roll-twin] {
+  display: none !important;
+}
 .page-brief[data-astro-cid-onysphra] h2[data-astro-cid-onysphra] {
   max-width: 20ch;
   margin-top: 0.75rem;
