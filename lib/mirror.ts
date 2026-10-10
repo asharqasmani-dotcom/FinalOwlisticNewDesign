@@ -124,11 +124,83 @@ function ensureFaqScript(html: string): string {
   return `${html}\n<script src="/faq.js" defer></script>`;
 }
 
+const SITE_ORIGIN = "https://www.owlisticstudio.com";
+
+const ORGANIZATION_JSON_LD = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Owlistic Studio",
+  url: SITE_ORIGIN,
+  email: "Ashar@owlisticstudio.com",
+  sameAs: ["https://www.linkedin.com/in/muhammad-ashar/"],
+});
+
+/** Rewrite leftover agency identity + set Owlistic canonicals/schema. */
+function fixSeoIdentity(html: string, slug: string[]): string {
+  const path =
+    slug.length === 0 ? "/" : `/${slug.join("/").replace(/\/+$/, "")}/`;
+  const canonical = `${SITE_ORIGIN}${path}`;
+
+  let out = html
+    .replace(/https?:\/\/(?:www\.)?legencymedia\.com/gi, SITE_ORIGIN)
+    .replace(/https?:\/\/(?:www\.)?owalisticsol\.com/gi, SITE_ORIGIN)
+    .replace(/Legency Media/g, "Owlistic Studio")
+    .replace(/Ibad Haider/gi, "Owlistic Studio")
+    .replace(
+      /content="noindex\s*,\s*nofollow"/gi,
+      'content="index,follow"',
+    )
+    .replace(
+      /content="nofollow\s*,\s*noindex"/gi,
+      'content="index,follow"',
+    );
+
+  // Drop wrong person schema left from prior brands.
+  out = out.replace(
+    /<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?(?:Ibad Haider|owalisticsol)[\s\S]*?<\/script>/gi,
+    "",
+  );
+
+  if (/rel=["']canonical["']/i.test(out)) {
+    out = out.replace(
+      /<link\b[^>]*rel=["']canonical["'][^>]*>/i,
+      `<link rel="canonical" href="${canonical}">`,
+    );
+  } else if (out.includes("</head>")) {
+    out = out.replace(
+      "</head>",
+      `<link rel="canonical" href="${canonical}">\n</head>`,
+    );
+  }
+
+  if (/property=["']og:url["']/i.test(out)) {
+    out = out.replace(
+      /<meta\b[^>]*property=["']og:url["'][^>]*>/i,
+      `<meta property="og:url" content="${canonical}">`,
+    );
+  }
+
+  if (
+    !out.includes('"@type":"Organization"') &&
+    !out.includes('"@type": "Organization"')
+  ) {
+    out = out.replace(
+      "</head>",
+      `<script type="application/ld+json">${ORGANIZATION_JSON_LD}</script>\n</head>`,
+    );
+  }
+
+  return out;
+}
+
 export function readMirrorHtml(slug: string[]): string | null {
   const file = resolveMirrorHtml(slug);
   if (!file) return null;
   const html = readFileSync(file, "utf8");
   return ensureFaqScript(
-    injectCanonicalNav(fixFooterAndDeadLinks(stripConsentBanner(html))),
+    fixSeoIdentity(
+      injectCanonicalNav(fixFooterAndDeadLinks(stripConsentBanner(html))),
+      slug,
+    ),
   );
 }
