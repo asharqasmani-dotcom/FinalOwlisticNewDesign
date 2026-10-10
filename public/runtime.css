@@ -1,0 +1,9 @@
+/* Keep the existing artwork available if WebGL or the animation script fails. */
+.hero__planet[data-live-dither] { background: url('/img/home-planet.webp') center / contain no-repeat; }
+/* Let narrow screens wrap long URLs without changing normal desktop typography. */
+.prose, .enquiry__field, .page-brief__copy { overflow-wrap: anywhere; min-width: 0; }
+.tsnav__bottom-overflow { overscroll-behavior: contain; }
+@media (prefers-reduced-motion: reduce) {
+  .transition { display: none !important; }
+  html { scroll-behavior: auto !important; }
+}

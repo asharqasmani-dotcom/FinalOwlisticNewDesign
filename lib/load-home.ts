@@ -1,3 +1,4 @@
+import { prepareMarkup } from "./prepare-markup";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
@@ -20,12 +21,12 @@ const mainSections = [
 ];
 
 export function loadHomeMarkup() {
-  return [
+  return prepareMarkup([
     read("transition.html"),
     read("nav.html"),
     "<main>",
     ...mainSections.map(read),
     "</main>",
     read("footer.html"),
-  ].join("\n");
+  ].join("\n"));
 }

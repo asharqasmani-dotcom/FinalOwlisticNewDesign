@@ -1,3 +1,4 @@
+import { prepareMarkup } from "./prepare-markup";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { injectCanonicalNav } from "@/lib/load-nav";
@@ -6,6 +7,7 @@ const mirrorRoot = path.join(process.cwd(), "mirror", "dist");
 
 export function resolveMirrorHtml(slug: string[]): string | null {
   const clean = slug.filter(Boolean);
+  if (clean.some((part) => part === "." || part === ".." || /[\\/\0]/.test(part))) return null;
   if (clean.length === 0) return null;
 
   const candidates = [
@@ -201,7 +203,7 @@ function fixSeoIdentity(html: string, slug: string[]): string {
 export function readMirrorHtml(slug: string[]): string | null {
   const file = resolveMirrorHtml(slug);
   if (!file) return null;
-  const html = readFileSync(file, "utf8");
+  const html = prepareMarkup(readFileSync(file, "utf8")).replace("</head>", '<link rel="stylesheet" href="/runtime.css"><script src="/runtime.js" defer></script></head>');
   return ensureFaqScript(
     fixSeoIdentity(
       injectCanonicalNav(fixFooterAndDeadLinks(stripConsentBanner(html))),
