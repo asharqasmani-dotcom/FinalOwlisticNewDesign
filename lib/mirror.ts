@@ -19,13 +19,13 @@ export function resolveMirrorHtml(slug: string[]): string | null {
   return null;
 }
 
+const BUBBLE_ARROW_CSS =
+  '<link rel="stylesheet" href="/_astro/btn-bubble-arrow.css">';
+
 function stripConsentBanner(html: string): string {
-  return html
+  let out = html
     // ConsentBanner CSS also held btn-bubble-arrow styles; keep those via a dedicated sheet.
-    .replace(
-      /<link[^>]*ConsentBanner[^>]*>/gi,
-      '<link rel="stylesheet" href="/_astro/btn-bubble-arrow.css">',
-    )
+    .replace(/<link[^>]*ConsentBanner[^>]*>/gi, BUBBLE_ARROW_CSS)
     .replace(/<script[^>]*ConsentBanner[^>]*><\/script>\s*/gi, "")
     .replace(
       /<!--\s*Withdrawing consent[\s\S]*?-->\s*<button\b[^>]*data-consent-reopen[^>]*>[\s\S]*?<\/button>/gi,
@@ -33,6 +33,16 @@ function stripConsentBanner(html: string): string {
     )
     .replace(/<button\b[^>]*data-consent-reopen[^>]*>[\s\S]*?<\/button>/gi, "")
     .replace(/<aside\b[^>]*id="consent-banner"[^>]*>[\s\S]*?<\/aside>/gi, "");
+
+  // Most mirrored pages never linked ConsentBanner CSS, so always ensure button styles load.
+  if (!out.includes("/_astro/btn-bubble-arrow.css")) {
+    if (out.includes("</head>")) {
+      out = out.replace("</head>", `${BUBBLE_ARROW_CSS}\n</head>`);
+    } else {
+      out = `${BUBBLE_ARROW_CSS}\n${out}`;
+    }
+  }
+  return out;
 }
 
 const FOOTER_LINK_MAP: Record<string, string> = {
