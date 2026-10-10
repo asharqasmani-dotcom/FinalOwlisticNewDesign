@@ -144,6 +144,11 @@ function fixSeoIdentity(html: string, slug: string[]): string {
   let out = html
     .replace(/https?:\/\/(?:www\.)?legencymedia\.com/gi, SITE_ORIGIN)
     .replace(/https?:\/\/(?:www\.)?owalisticsol\.com/gi, SITE_ORIGIN)
+    .replace(
+      /https?:\/\/(?:www\.)?linkedin\.com\/company\/legencymedia\/?/gi,
+      "https://www.linkedin.com/in/muhammad-ashar/",
+    )
+    .replace(/legencymedia\.com/gi, "owlisticstudio.com")
     .replace(/Legency Media/g, "Owlistic Studio")
     .replace(/Ibad Haider/gi, "Owlistic Studio")
     .replace(
