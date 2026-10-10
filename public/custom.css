@@ -2,14 +2,20 @@
 
 /* page-brief two-column intro (label+heading | copy+links) */
 .page-brief[data-astro-cid-onysphra] {
-  background: var(--white, #fff);
-  border-block: 1px solid #0c0c141f;
-  padding-block: clamp(2rem, 5vw, 4.5rem);
+  background: #ffffff !important;
+  border-block: 0 !important;
+  padding-block: clamp(2.5rem, 6vw, 5rem);
 }
 .page-brief__inner[data-astro-cid-onysphra] {
-  display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) !important;
   gap: clamp(1.5rem, 5vw, 5rem);
+  align-items: start;
+}
+
+/* Service "evo" bands sit on body gray — keep them white like the brief */
+.section.evo[data-astro-cid-asdozulm] {
+  background: #ffffff !important;
 }
 .page-brief[data-astro-cid-onysphra] h2[data-astro-cid-onysphra] {
   max-width: 20ch;
