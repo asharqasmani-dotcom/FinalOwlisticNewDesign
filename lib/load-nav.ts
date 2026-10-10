@@ -10,8 +10,12 @@ function readCanonicalNav(): string {
 /** Nav markup for inner (mirrored) pages — same menu as home, with off-page hash links fixed. */
 export function loadInnerPageNav(): string {
   return readCanonicalNav()
-    .replace(/href="#contact"/g, 'href="/get-in-touch/"')
-    .replace(/href="#services"/g, 'href="/#services"');
+    .replace(/href="#contact"/g, 'href="/get-in-touch"')
+    .replace(/href="#services"/g, 'href="/#services"')
+    .replace(
+      /<a(?![^>]*data-transition-prevent)([^>]*href="\/get-in-touch"[^>]*)>/g,
+      '<a data-transition-prevent$1>',
+    );
 }
 
 const TS_NAV_RE = /<nav\s+class="tsnav"[\s\S]*?<\/nav>/;

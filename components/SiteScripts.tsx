@@ -6,6 +6,7 @@ const SCRIPTS = [
   "/_astro/Nav.astro_astro_type_script_index_0_lang.BTi8Y4C0.js",
   "/_astro/Footer.astro_astro_type_script_index_0_lang.QLgbxcz6.js",
   "/_astro/Base.astro_astro_type_script_index_0_lang.C-STEiC0.js",
+  "/faq.js",
   "/homepage.js",
 ];
 

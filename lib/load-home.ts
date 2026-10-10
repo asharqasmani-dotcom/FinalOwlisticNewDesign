@@ -27,6 +27,5 @@ export function loadHomeMarkup() {
     ...mainSections.map(read),
     "</main>",
     read("footer.html"),
-    read("consent.html"),
   ].join("\n");
 }
