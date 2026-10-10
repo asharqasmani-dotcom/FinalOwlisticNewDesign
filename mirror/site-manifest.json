@@ -1,0 +1,218 @@
+{
+  "origin": "https://legencymedia.com",
+  "pages": [
+    {
+      "path": "/about/",
+      "bytes": 42530
+    },
+    {
+      "path": "/aeo-agency/",
+      "bytes": 89329
+    },
+    {
+      "path": "/ai-visibility-index/",
+      "bytes": 50982
+    },
+    {
+      "path": "/answer-engine-optimization/",
+      "bytes": 59332
+    },
+    {
+      "path": "/b2b-web-design/",
+      "bytes": 57005
+    },
+    {
+      "path": "/b2b-website-redesign/",
+      "bytes": 58696
+    },
+    {
+      "path": "/blog/",
+      "bytes": 47853
+    },
+    {
+      "path": "/blog/5-trust-signals-every-b2b-homepage-needs/",
+      "bytes": 44776
+    },
+    {
+      "path": "/blog/aeo-vs-seo-what-changes-for-marketing-teams/",
+      "bytes": 47422
+    },
+    {
+      "path": "/blog/ai-citation-tracking-tools/",
+      "bytes": 49063
+    },
+    {
+      "path": "/blog/b2b-website-performance-scorecard/",
+      "bytes": 53773
+    },
+    {
+      "path": "/blog/building-astro-websites-with-lumos/",
+      "bytes": 84546
+    },
+    {
+      "path": "/blog/google-preferred-sources/",
+      "bytes": 41239
+    },
+    {
+      "path": "/blog/how-long-does-a-wordpress-to-webflow-migration-take/",
+      "bytes": 40243
+    },
+    {
+      "path": "/blog/how-to-choose-a-webflow-enterprise-agency/",
+      "bytes": 48717
+    },
+    {
+      "path": "/blog/how-to-migrate-from-wordpress-to-webflow-without-losing-seo/",
+      "bytes": 46705
+    },
+    {
+      "path": "/blog/how-to-optimize-for-answer-engines-2026-guide/",
+      "bytes": 48294
+    },
+    {
+      "path": "/blog/is-generative-engine-optimization-the-same-as-aeo/",
+      "bytes": 48190
+    },
+    {
+      "path": "/blog/source-by-webflow-b2b-marketing-teams/",
+      "bytes": 50396
+    },
+    {
+      "path": "/blog/webflow-enterprise-what-you-get-what-it-costs-when-it-is-wrong/",
+      "bytes": 43746
+    },
+    {
+      "path": "/blog/webflow-sitemaps-now-include-lastmod-dates/",
+      "bytes": 39402
+    },
+    {
+      "path": "/blog/webflow-vs-wordpress-for-b2b-marketing-teams/",
+      "bytes": 46361
+    },
+    {
+      "path": "/blog/what-does-a-webflow-enterprise-partner-actually-do/",
+      "bytes": 45383
+    },
+    {
+      "path": "/case-studies/",
+      "bytes": 45127
+    },
+    {
+      "path": "/case-studies/blueflame-ai/",
+      "bytes": 40910
+    },
+    {
+      "path": "/case-studies/channelsight/",
+      "bytes": 42848
+    },
+    {
+      "path": "/case-studies/dydx/",
+      "bytes": 39447
+    },
+    {
+      "path": "/case-studies/k2-group/",
+      "bytes": 42092
+    },
+    {
+      "path": "/cookies/",
+      "bytes": 35356
+    },
+    {
+      "path": "/get-in-touch/",
+      "bytes": 61695
+    },
+    {
+      "path": "/how-we-work/",
+      "bytes": 61639
+    },
+    {
+      "path": "/industries/crypto-digital-assets/",
+      "bytes": 61315
+    },
+    {
+      "path": "/industries/ecommerce-technology/",
+      "bytes": 60131
+    },
+    {
+      "path": "/industries/fintech-ai/",
+      "bytes": 57512
+    },
+    {
+      "path": "/industries/insurance-insurtech/",
+      "bytes": 61424
+    },
+    {
+      "path": "/industries/professional-services/",
+      "bytes": 63729
+    },
+    {
+      "path": "/privacy/",
+      "bytes": 44437
+    },
+    {
+      "path": "/resources/",
+      "bytes": 36076
+    },
+    {
+      "path": "/resources/astro-lumos-build-checklist/",
+      "bytes": 48643
+    },
+    {
+      "path": "/resources/content-scoreability-checker/",
+      "bytes": 35861
+    },
+    {
+      "path": "/resources/how-to-improve-your-readability-score/",
+      "bytes": 50984
+    },
+    {
+      "path": "/saas-website-design/",
+      "bytes": 60311
+    },
+    {
+      "path": "/schedule/",
+      "bytes": 44360
+    },
+    {
+      "path": "/services/astro-agency/",
+      "bytes": 58283
+    },
+    {
+      "path": "/services/conversion-measurement/",
+      "bytes": 61029
+    },
+    {
+      "path": "/services/conversion-rate-optimization/",
+      "bytes": 67572
+    },
+    {
+      "path": "/services/search-ai-visibility/",
+      "bytes": 64092
+    },
+    {
+      "path": "/services/technical-seo/",
+      "bytes": 66468
+    },
+    {
+      "path": "/services/webflow-enterprise/",
+      "bytes": 61933
+    },
+    {
+      "path": "/services/webflow-support/",
+      "bytes": 66114
+    },
+    {
+      "path": "/services/wordpress-to-webflow-migration/",
+      "bytes": 63913
+    },
+    {
+      "path": "/web-design-galway/",
+      "bytes": 61251
+    },
+    {
+      "path": "/webflow-agency-ireland/",
+      "bytes": 50089
+    }
+  ],
+  "assets": 136
+}

@@ -1,0 +1,35 @@
+      .pixelated-scroll-transition {
+        z-index: 10;
+        pointer-events: none;
+        position: absolute;
+        inset: auto 0 0;
+      }
+      [data-pixelated-scroll-panel] {
+        flex-direction: row;
+        width: 100%;
+        display: flex;
+      }
+      [data-pixelated-scroll-column] {
+        flex-direction: column;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: stretch;
+        min-width: 0;
+        display: flex;
+      }
+      [data-pixelated-scroll-pixel] {
+        aspect-ratio: 1;
+        backface-visibility: hidden;
+        will-change: opacity;
+        background-color: currentColor;
+        width: 100%;
+      }
+      [data-pixelated-scroll-transition][data-mode="reveal"] {
+        inset: 0 0 auto;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .pixelated-scroll-transition {
+          display: none;
+        }
+      }
+    

@@ -1,0 +1,99 @@
+/* Owlistic copy layout helpers */
+
+/* Case studies hub: service label + title instead of partner logos */
+.case-card__client[data-astro-cid-q7obu3qe] {
+  align-items: flex-start !important;
+  max-width: min(380px, 68%);
+}
+
+.case-card__service {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  color: var(--white);
+}
+
+.case-card__eyebrow {
+  font-size: 0.62em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.case-card__headline {
+  font-size: 0.95em;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.hero__inner > .label {
+  display: inline-block;
+  margin-bottom: var(--sp-3);
+}
+
+.blogteaser .cases__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+.blogteaser .cases__head .blogteaser__title {
+  margin: 0;
+}
+
+.blogteaser .post-card > p {
+  margin: 0.5rem 0 0;
+  opacity: 0.75;
+  font-size: var(--para-sm);
+}
+
+
+/* Get in touch — Owlistic enquiry */
+.enquiry__intro .label {
+  display: inline-block;
+  margin-bottom: var(--sp-3);
+}
+.enquiry__email-line {
+  display: inline-block;
+  margin-top: 0.5em;
+  opacity: 0.85;
+}
+.enquiry__proof--owlistic {
+  display: grid;
+  gap: 0.75rem;
+}
+.enquiry__plan-note {
+  margin: 0;
+  max-width: 28rem;
+  opacity: 0.85;
+}
+.enquiry__monthly-plan {
+  margin-top: var(--sp-4);
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius-sm, 12px);
+  background: color-mix(in srgb, var(--blue, #1027ff) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--blue, #1027ff) 25%, transparent);
+}
+.enquiry__monthly-plan-label {
+  margin: 0 0 0.35rem;
+  font-size: var(--para-sm, 0.875rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.enquiry__monthly-plan-price {
+  margin: 0;
+  font-size: var(--h5, 1.35rem);
+}
+.enquiry__monthly-plan-upfront {
+  margin: 0.35rem 0 0.5rem;
+  font-weight: 500;
+}
+.enquiry__monthly-plan-copy {
+  margin: 0;
+  opacity: 0.8;
+}
