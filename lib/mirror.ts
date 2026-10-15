@@ -1,7 +1,7 @@
 import { prepareMarkup } from "./prepare-markup";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { injectCanonicalNav } from "@/lib/load-nav";
+import { injectCanonicalNav, injectCanonicalFooter } from "@/lib/load-nav";
 
 const mirrorRoot = path.join(process.cwd(), "mirror", "dist");
 
@@ -133,7 +133,7 @@ const ORGANIZATION_JSON_LD = JSON.stringify({
   "@type": "Organization",
   name: "Owlistic Studio",
   url: SITE_ORIGIN,
-  email: "sales@owlisticstudio.com",
+  email: "ashar@owlisticstudio.com",
   sameAs: ["https://www.linkedin.com/in/muhammad-ashar/"],
 });
 
@@ -206,7 +206,11 @@ export function readMirrorHtml(slug: string[]): string | null {
   const html = prepareMarkup(readFileSync(file, "utf8")).replace("</head>", '<link rel="stylesheet" href="/runtime.css"><script src="/runtime.js" defer></script></head>');
   return ensureFaqScript(
     fixSeoIdentity(
-      injectCanonicalNav(fixFooterAndDeadLinks(stripConsentBanner(html))),
+      injectCanonicalNav(
+        injectCanonicalFooter(
+          fixFooterAndDeadLinks(stripConsentBanner(html)),
+        ),
+      ),
       slug,
     ),
   );

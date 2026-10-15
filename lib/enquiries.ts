@@ -45,13 +45,20 @@ export function validateAnswers(input: unknown, step: number): Record<string, un
     } catch { return null; }
   }
   const services = source.services ?? [];
-  const allowedServices = ['social-media','customer-comm','lead-gen','seo-visibility','branding','website-support','complete','instagram','facebook','linkedin','twitter','guidance'];
+  const allowedServices = [
+    'social-media','customer-comm','lead-gen','seo-visibility','branding','website-support','complete',
+    'packaging','shopify','wordpress','guidance','instagram','facebook','linkedin','twitter'
+  ];
   if (!Array.isArray(services) || services.length > 16 || services.some(value => !allowedServices.includes(value))) return null;
   result.services = [...new Set(services)];
   result.followUpConsent = source.followUpConsent === true;
   if (step >= 2 && (!services.length || !['project','monthly','both','unsure'].includes(String(result.engagement)))) return null;
   if (step === 3) {
-    if (!['Generate More Leads','Improve Social Media Presence','Manage Customer Inquiries','Improve Online Visibility','Complete Digital Support'].includes(String(result.companySize))) return null;
+    const allowedGoals = [
+      'Generate More Leads','Improve Social Media Presence','Manage Customer Inquiries','Improve Online Visibility','Complete Digital Support',
+      'Launch a New Brand Identity','Custom Packaging & Label Design','Build a New Website or Store','Redesign Existing Web Presence','Ongoing Creative & Design Retainer'
+    ];
+    if (!allowedGoals.includes(String(result.companySize))) return null;
     if (!['Software and AI','Financial services','Insurance','Professional services','E-commerce and retail','Healthcare','Property and relocation','Other'].includes(String(result.industry))) return null;
     if (!['Immediately','Within 2 Weeks','Within a Month','Just Exploring'].includes(String(result.timing))) return null;
     if (['monthly','both'].includes(String(result.engagement)) && !['300','guidance'].includes(String(result.monthlyBudget))) return null;
