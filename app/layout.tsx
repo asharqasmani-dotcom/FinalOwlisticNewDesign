@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { SiteScripts } from "@/components/SiteScripts";
 
 const description =
-  "We manage your social media, customer inquiries, and online presence so you can focus on growing your business. Start with $0 upfront. $300/month after your first month if satisfied.";
+  "Owlistic Studio creates brand identities, packaging, Shopify and WordPress websites, and white-label creative solutions for businesses and agencies.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.owlisticstudio.com"),
-  title: "Owlistic Studio | Your Business. Our Responsibility.",
+  title: "Owlistic Studio | Brand Identity, Packaging & Web Design",
   description,
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.owlisticstudio.com/",
     siteName: "Owlistic Studio",
-    title: "Owlistic Studio | Your Business. Our Responsibility.",
+    title: "Owlistic Studio | Brand Identity, Packaging & Web Design",
     description,
   },
   twitter: {
@@ -31,8 +31,11 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "Owlistic Studio",
   url: "https://www.owlisticstudio.com",
-  email: "sales@owlisticstudio.com",
-  sameAs: ["https://www.linkedin.com/in/muhammad-ashar/"],
+  email: "ashar@owlisticstudio.com",
+  sameAs: [
+    "https://www.linkedin.com/in/muhammad-ashar/",
+    "https://www.behance.net/asharqasmani",
+  ],
 };
 
 export default function RootLayout({

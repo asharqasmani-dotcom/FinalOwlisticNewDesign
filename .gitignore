@@ -14,3 +14,4 @@ homepage-preview.jpg
 
 .data
 .env.local
+public/media/
